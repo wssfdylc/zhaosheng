@@ -472,7 +472,7 @@
                 <div class="form-card" id="formCard">
                     <h3>📝 在线咨询报名 <span class="badge">限时名额</span></h3>
                     <p class="form-subtitle">填写信息，叶老师将第一时间与您沟通</p>
-                    <form id="inquiryForm">
+                    <form id="inquiryForm" action="https://formspree.io/f/xzdqdyjj" method="POST">
                         <div class="form-group">
                             <label>学生姓名 <span class="required">*</span></label>
                             <input type="text" name="studentName" placeholder="请输入学生姓名" required>
@@ -649,21 +649,31 @@
 
         const inquiryForm = document.getElementById('inquiryForm');
         const toast = document.getElementById('toast');
-        inquiryForm.addEventListener('submit', (e) => {
+        inquiryForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const formData = new FormData(inquiryForm);
-            const data = Object.fromEntries(formData.entries());
-            console.log('报名信息：', data);
+
+            // 发送到 Formspree，您邮箱收到通知
+            try {
+                await fetch('https://formspree.io/f/xzdqdyjj', {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+            } catch (err) {
+                console.log('提交出错，但数据已尝试发送');
+            }
+
             toast.classList.add('show');
             setTimeout(() => toast.classList.remove('show'), 3000);
             inquiryForm.reset();
             popupOpen = false;
             wechatPopup.classList.remove('show');
             setTimeout(() => {
-                const addWechat = confirm('✅ 报名信息已提交成功！\n\n为确保第一时间获取招生动态，建议您现在添加叶老师微信。\n\n点击"确定"复制微信号到剪贴板');
+                const addWechat = confirm('✅ 报名信息已提交成功！\n\n叶老师将尽快联系您。\n为确保及时沟通，建议您现在添加叶老师微信。\n\n点击"确定"复制微信号到剪贴板');
                 if (addWechat) {
                     navigator.clipboard.writeText('Ylc-xianyu').then(() => {
-                        alert('✅ 微信号已复制！请打开微信搜索添加好友。');
+                        alert('✅ 微信号已复制！\n请打开微信搜索添加好友。');
                     }).catch(() => {});
                 }
             }, 500);
