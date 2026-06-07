@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语音转文字 - 叶老师招生助手</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; padding: 16px; }
+        .header { text-align: center; padding: 12px 0 20px; }
+        .header h1 { font-size: 1.1rem; color: #10b981; }
+        .header p { font-size: 0.8rem; color: #64748b; margin-top: 4px; }
+        .transcript-box { background: #1e293b; border-radius: 16px; padding: 20px; min-height: 300px; max-height: 60vh; overflow-y: auto; margin-bottom: 16px; border: 1px solid #334155; }
+        .transcript-box .line { padding: 8px 0; border-bottom: 1px solid #1e293b; animation: fadeIn 0.3s; }
+        .transcript-box .line .speaker { font-size: 0.7rem; color: #10b981; font-weight: 600; }
+        .transcript-box .line .text { font-size: 1.1rem; color: #f1f5f9; margin-top: 2px; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .controls { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 16px 32px; border: none; border-radius: 50px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.2s; font-family: inherit; }
+        .btn-start { background: #10b981; color: #fff; flex: 1; max-width: 200px; }
+        .btn-start:hover { background: #059669; }
+        .btn-start.listening { background: #ef4444; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.4); } 50% { box-shadow: 0 0 0 16px rgba(239,68,68,0); } }
+        .btn-clear { background: #334155; color: #cbd5e1; padding: 12px 24px; font-size: 0.85rem; }
+        .btn-clear:hover { background: #475569; }
+        .status { text-align: center; font-size: 0.8rem; color: #64748b; margin-top: 12px; }
+        .status .lang { color: #f59e0b; }
+        .interim { color: #94a3b8 !important; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎙️ 通话实时转写</h1>
+        <p>家长说的话自动转文字 · <span class="lang">中文普通话</span></p>
+    </div>
+
+    <div class="transcript-box" id="transcript"></div>
+
+    <div class="controls">
+        <button class="btn btn-start" id="btnStart" onclick="toggleListen()">🎤 开始监听</button>
+        <button class="btn btn-clear" onclick="clearAll()">清空</button>
+    </div>
+    <div class="status" id="status">点「开始监听」后，家长说话会自动出现在这里</div>
+
+    <script>
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SpeechRecognition) {
+            document.getElementById('status').innerHTML = '❌ 您的浏览器不支持语音识别。<br>请用 <b>Chrome 浏览器</b> 打开此页面。';
+            document.getElementById('btnStart').disabled = true;
+        }
+
+        let recognition = null;
+        let isListening = false;
+        let finalTranscript = '';
+        let lineCount = 0;
+
+        function toggleListen() {
+            if (isListening) { stopListen(); return; }
+            startListen();
+        }
+
+        function startListen() {
+            recognition = new SpeechRecognition();
+            recognition.lang = 'zh-CN';
+            recognition.interimResults = true;
+            recognition.continuous = true;
+            recognition.maxAlternatives = 1;
+
+            recognition.onresult = (event) => {
+                let interim = '';
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    const result = event.results[i];
+                    if (result.isFinal) {
+                        finalTranscript = result[0].transcript;
+                        lineCount++;
+                        addLine('家长', finalTranscript);
+                        finalTranscript = '';
+                    } else {
+                        interim += result[0].transcript;
+                    }
+                }
+                updateInterim(interim);
+            };
+
+            recognition.onerror = (e) => {
+                if (e.error === 'no-speech') return;
+                document.getElementById('status').textContent = '⚠️ 识别出错: ' + e.error + '（自动重试中...）';
+                setTimeout(() => { if (isListening) recognition.start(); }, 500);
+            };
+
+            recognition.onend = () => {
+                if (isListening) {
+                    try { recognition.start(); } catch(e) {}
+                }
+            };
+
+            recognition.start();
+            isListening = true;
+            document.getElementById('btnStart').textContent = '⏹ 停止监听';
+            document.getElementById('btnStart').classList.add('listening');
+            document.getElementById('status').textContent = '🔴 监听中... 家长说话实时转写';
+        }
+
+        function stopListen() {
+            if (recognition) {
+                try { recognition.stop(); } catch(e) {}
+            }
+            isListening = false;
+            document.getElementById('btnStart').textContent = '🎤 开始监听';
+            document.getElementById('btnStart').classList.remove('listening');
+            document.getElementById('status').textContent = '⏸ 已停止 · 共转写 ' + lineCount + ' 句';
+            updateInterim('');
+        }
+
+        function addLine(speaker, text) {
+            const box = document.getElementById('transcript');
+            const div = document.createElement('div');
+            div.className = 'line';
+            div.innerHTML = `<div class="speaker">🗣️ ${speaker}</div><div class="text">${text}</div>`;
+            box.appendChild(div);
+            box.scrollTop = box.scrollHeight;
+        }
+
+        function updateInterim(text) {
+            const box = document.getElementById('transcript');
+            let interimEl = document.getElementById('interim-line');
+            if (text) {
+                if (!interimEl) {
+                    interimEl = document.createElement('div');
+                    interimEl.id = 'interim-line';
+                    interimEl.className = 'line';
+                    interimEl.innerHTML = '<div class="speaker">🔊 识别中...</div><div class="text interim"></div>';
+                    box.appendChild(interimEl);
+                }
+                interimEl.querySelector('.text').textContent = text;
+                box.scrollTop = box.scrollHeight;
+            } else if (interimEl) {
+                interimEl.remove();
+            }
+        }
+
+        function clearAll() {
+            document.getElementById('transcript').innerHTML = '';
+            finalTranscript = '';
+            lineCount = 0;
+            document.getElementById('status').textContent = '已清空';
+        }
+    </script>
+</body>
+</html>
