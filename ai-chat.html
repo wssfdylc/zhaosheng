@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小叶 · AI招生咨询助手 | 赣州青年科技职业学校</title>
+    <meta name="description" content="赣州青年科技职业学校AI智能招生咨询助手，24小时在线解答学校、专业、报名、费用等所有问题。">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0ea87a;
+            --primary-dark: #0b8c64;
+            --primary-light: #e6f7f1;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --bg: #f8fafc;
+            --white: #fff;
+            --border: #e2e8f0;
+            --shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #f0fdf7; color: var(--text); height: 100vh; display: flex; flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ========== 顶部导航栏 ========== */
+        .topbar {
+            background: linear-gradient(135deg, #0ea87a, #0b8c64);
+            color: #fff; padding: 0 20px; height: 56px;
+            display: flex; align-items: center; justify-content: space-between;
+            flex-shrink: 0; box-shadow: 0 2px 12px rgba(14,168,122,0.25);
+            z-index: 10;
+        }
+        .topbar-left { display: flex; align-items: center; gap: 10px; }
+        .topbar-avatar {
+            width: 36px; height: 36px; border-radius: 50%;
+            background: rgba(255,255,255,0.2); display: flex; align-items: center;
+            justify-content: center; font-size: 1.1rem;
+        }
+        .topbar-info h3 { font-size: 0.95rem; font-weight: 700; line-height: 1.2; }
+        .topbar-info span { font-size: 0.7rem; opacity: 0.85; display: flex; align-items: center; gap: 4px; }
+        .topbar-info span::before {
+            content: ''; width: 7px; height: 7px; border-radius: 50%;
+            background: #4ade80; display: inline-block; animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .topbar-actions { display: flex; gap: 6px; align-items: center; }
+        .topbar-btn {
+            width: 34px; height: 34px; border-radius: 50%; border: none;
+            background: rgba(255,255,255,0.18); color: #fff; cursor: pointer;
+            font-size: 0.85rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;
+            text-decoration: none;
+        }
+        .topbar-btn:hover { background: rgba(255,255,255,0.3); }
+        .topbar-wechat {
+            background: #07c160; font-size: 0.75rem; padding: 0 14px; width: auto;
+            border-radius: 50px; font-weight: 600; gap: 6px; white-space: nowrap;
+        }
+        .topbar-wechat:hover { background: #06ad56; }
+
+        /* ========== 主聊天区域 ========== */
+        .chat-container {
+            flex: 1; display: flex; flex-direction: column; max-width: 800px;
+            width: 100%; margin: 0 auto; background: #fff; overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        @media (min-width: 801px) {
+            .chat-container { margin: 8px auto; border-radius: 16px; flex: 1; max-height: calc(100vh - 72px); }
+        }
+
+        /* 消息列表 */
+        .chat-messages {
+            flex: 1; overflow-y: auto; padding: 16px 20px;
+            background: #fafbfc; display: flex; flex-direction: column; gap: 14px;
+            scroll-behavior: smooth;
+        }
+        .chat-messages::-webkit-scrollbar { width: 5px; }
+        .chat-messages::-webkit-scrollbar-track { background: transparent; }
+        .chat-messages::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+
+        /* 欢迎区域 */
+        .welcome-area { text-align: center; padding: 32px 16px 8px; }
+        .welcome-avatar {
+            width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 14px;
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            display: flex; align-items: center; justify-content: center; font-size: 2rem;
+        }
+        .welcome-area h2 { font-size: 1.2rem; color: var(--text); margin-bottom: 4px; }
+        .welcome-area p { font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; }
+        .welcome-wechat {
+            display: inline-flex; align-items: center; gap: 6px; background: #fef3c7;
+            color: #92400e; padding: 6px 14px; border-radius: 50px; font-size: 0.8rem;
+            font-weight: 600; cursor: pointer; border: none; font-family: inherit;
+            transition: 0.2s;
+        }
+        .welcome-wechat:hover { background: #fde68a; }
+
+        /* 快捷问题卡片 */
+        .quick-questions {
+            display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 0 8px; justify-content: center;
+        }
+        .quick-q {
+            padding: 9px 16px; background: #fff; border: 1.5px solid #d1fae5;
+            border-radius: 50px; font-size: 0.82rem; color: #0ea87a; cursor: pointer;
+            transition: all 0.2s; font-family: inherit; white-space: nowrap;
+        }
+        .quick-q:hover { background: #d1fae5; border-color: #0ea87a; color: #0b8c64; transform: translateY(-1px); }
+
+        /* 消息气泡 */
+        .msg-row { display: flex; gap: 8px; max-width: 88%; animation: msgIn 0.3s ease; }
+        @keyframes msgIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .msg-row.bot { align-self: flex-start; }
+        .msg-row.user { align-self: flex-end; flex-direction: row-reverse; }
+        .msg-avatar {
+            width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center; font-size: 0.85rem;
+        }
+        .msg-row.bot .msg-avatar { background: #d1fae5; }
+        .msg-row.user .msg-avatar { background: #dbeafe; }
+        .msg-bubble {
+            padding: 10px 15px; border-radius: 16px; font-size: 0.9rem;
+            line-height: 1.7; word-break: break-word; white-space: pre-wrap;
+        }
+        .msg-row.bot .msg-bubble { background: #fff; border: 1px solid #e2e8f0; border-bottom-left-radius: 4px; color: var(--text); }
+        .msg-row.user .msg-bubble { background: linear-gradient(135deg, #0ea87a, #0b8c64); color: #fff; border-bottom-right-radius: 4px; }
+        .msg-bubble .highlight-wechat {
+            display: inline-block; background: #fef3c7; color: #92400e;
+            padding: 2px 8px; border-radius: 4px; font-weight: 600;
+            cursor: pointer; margin: 3px 0;
+        }
+        .msg-time { font-size: 0.65rem; color: #94a3b8; margin-top: 4px; padding: 0 4px; }
+
+        /* 打字指示器 */
+        .typing-indicator {
+            display: flex; gap: 8px; align-self: flex-start; padding: 4px 0;
+        }
+        .typing-dots { display: flex; gap: 5px; align-items: center; padding: 4px; }
+        .typing-dots span {
+            width: 8px; height: 8px; border-radius: 50%; background: #94a3b8;
+            animation: bounce 1.3s ease-in-out infinite;
+        }
+        .typing-dots span:nth-child(2) { animation-delay: 0.15s; }
+        .typing-dots span:nth-child(3) { animation-delay: 0.3s; }
+        @keyframes bounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-8px); }
+        }
+
+        /* ========== 底部输入区域 ========== */
+        .chat-footer {
+            padding: 12px 16px; border-top: 1px solid var(--border);
+            background: #fff; display: flex; gap: 8px; align-items: center; flex-shrink: 0;
+        }
+        .chat-footer .voice-btn {
+            width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid #e2e8f0;
+            background: #fff; cursor: pointer; font-size: 1.1rem; color: #64748b;
+            transition: 0.2s; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+        }
+        .chat-footer .voice-btn:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
+        .chat-footer .voice-btn.listening {
+            background: #ef4444; color: #fff; border-color: #ef4444;
+            animation: pulse-red 1.5s infinite;
+        }
+        @keyframes pulse-red {
+            0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.35); }
+            50% { box-shadow: 0 0 0 14px rgba(239,68,68,0); }
+        }
+        .chat-footer input {
+            flex: 1; padding: 11px 16px; border: 1.5px solid #e2e8f0;
+            border-radius: 50px; font-size: 0.9rem; font-family: inherit;
+            outline: none; transition: 0.3s; background: #f8fafc;
+        }
+        .chat-footer input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(14,168,122,0.08); background: #fff; }
+        .chat-footer .send-btn {
+            width: 42px; height: 42px; border-radius: 50%; border: none;
+            background: linear-gradient(135deg, #0ea87a, #0b8c64); color: #fff;
+            cursor: pointer; flex-shrink: 0; font-size: 1rem; transition: 0.2s;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .chat-footer .send-btn:hover { background: #0b8c64; transform: scale(1.05); }
+        .chat-footer .send-btn:disabled { background: #94a3b8; cursor: not-allowed; transform: none; }
+
+        /* Toast 提示 */
+        .toast {
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+            background: #059669; color: #fff; padding: 12px 24px;
+            border-radius: 50px; font-size: 0.85rem; font-weight: 600;
+            z-index: 9999; box-shadow: 0 8px 24px rgba(5,150,105,0.3);
+            opacity: 0; pointer-events: none; transition: opacity 0.3s;
+        }
+        .toast.show { opacity: 1; pointer-events: all; }
+
+        /* 响应式 */
+        @media (max-width: 480px) {
+            .chat-container { margin: 0; border-radius: 0; }
+            .chat-messages { padding: 12px 14px; }
+            .msg-row { max-width: 95%; }
+            .welcome-area { padding: 20px 12px 4px; }
+            .welcome-avatar { width: 60px; height: 60px; font-size: 1.6rem; }
+            .quick-q { font-size: 0.78rem; padding: 7px 13px; }
+            .topbar { padding: 0 12px; height: 50px; }
+            .topbar-info h3 { font-size: 0.88rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- 顶部导航 -->
+    <div class="topbar">
+        <div class="topbar-left">
+            <div class="topbar-avatar">🤖</div>
+            <div class="topbar-info">
+                <h3>小叶 · AI招生助手</h3>
+                <span>在线 · 秒回复</span>
+            </div>
+        </div>
+        <div class="topbar-actions">
+            <button class="topbar-btn" onclick="clearChat()" title="新对话"><i class="fas fa-plus"></i></button>
+            <button class="topbar-btn topbar-wechat" onclick="copyWechat()" title="复制叶老师微信">
+                <i class="fa-brands fa-weixin"></i> 加叶老师微信
+            </button>
+            <a href="index.html" class="topbar-btn" title="返回招生网站"><i class="fas fa-home"></i></a>
+        </div>
+    </div>
+
+    <!-- 聊天容器 -->
+    <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+            <!-- 欢迎区域 -->
+            <div class="welcome-area" id="welcomeArea">
+                <div class="welcome-avatar">🤖</div>
+                <h2>您好！我是小叶 🎓</h2>
+                <p>赣州青年科技职业学校的<strong>AI招生咨询助手</strong></p>
+                <p style="font-size:0.8rem;color:#94a3b8;">关于学校、专业、报名、费用、升学、就业…<br>任何问题都可以问我～</p>
+                <button class="welcome-wechat" onclick="copyWechat()">
+                    <i class="fa-brands fa-weixin"></i> 叶老师微信：Ylc-xianyu（点击复制）
+                </button>
+            </div>
+            <!-- 快捷问题 -->
+            <div class="quick-questions" id="quickQuestions">
+                <button class="quick-q" onclick="sendQuick(this)">📚 有哪些热门专业？</button>
+                <button class="quick-q" onclick="sendQuick(this)">💰 学费和住宿费多少？</button>
+                <button class="quick-q" onclick="sendQuick(this)">🎓 毕业后能考大学吗？</button>
+                <button class="quick-q" onclick="sendQuick(this)">📝 怎么报名？需要什么条件？</button>
+                <button class="quick-q" onclick="sendQuick(this)">🏫 学校环境怎么样？</button>
+                <button class="quick-q" onclick="sendQuick(this)">💼 毕业后包分配工作吗？</button>
+            </div>
+        </div>
+
+        <!-- 输入区域 -->
+        <div class="chat-footer">
+            <button class="voice-btn" id="voiceBtn" onclick="toggleVoice()" title="语音输入">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <input type="text" id="chatInput" placeholder="输入您的问题…" maxlength="500" autocomplete="off">
+            <button class="send-btn" id="sendBtn" onclick="sendMessage()" title="发送">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+<script>
+// ==================== 🤖 AI 聊天助手配置 ====================
+
+// ⚠️ 部署后请在 GitHub 上编辑此文件，将下面的 Key 替换为真实的 DeepSeek API Key
+const DEEPSEEK_API_KEY = 'sk-你的key填在这里';
+
+// DeepSeek API 地址（不用改）
+const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
+
+// 对话历史保留条数
+const MAX_HISTORY = 30;
+
+// ==================== 系统提示词（小叶的人设和知识库） ====================
+const SYSTEM_PROMPT = `你是赣州青年科技职业学校的智能招生咨询专家，名字叫"小叶"。你是一位经验丰富、亲切热情的招生老师。
+
+## 身份定位
+- 你是赣州青年科技职业学校的官方招生咨询老师"小叶"
+- 主管老师是叶老师，微信号：Ylc-xianyu
+- 你不是冷冰冰的机器人，而是一位真心为学生着想的教育工作者
+- 目标：帮助家长解决疑虑 → 建立信任 → 引导报名/添加微信
+
+## 称呼与沟通风格
+- 对家长称呼：家长、同学爸爸妈妈、哥、姐
+- 对学生称呼：同学、小孩
+- 语气：热情、耐心、真诚、有亲和力
+- 用口语化中文，不要书面语不要官方腔
+- 每条回复控制在150-250字，不要太长
+
+## 学校核心信息（必须准确）
+- 学校全称：赣州青年科技职业学校
+- 性质：市教育局直属、省教育厅备案，民办公助全日制中等职业学校
+- 招生代码：3636000425
+- 地址：江西省赣州经济技术开发区湖边镇湖边大道1号
+- 规模：占地112.88亩，建筑面积63,572㎡，总投资3.5亿元
+- 在校学生：3,600余人，教职工200余人（专任教师148人，双师型教师38人）
+- 招生对象：应往届初中毕业生及同等学力者，年满14周岁
+- 报名时间：即日起至2026年8月31日
+- 报名材料：户口本、身份证、社保卡（需激活）、毕业证
+
+## 关于"公办还是民办"
+我们是市教育局直属、省教育厅备案的民办公助全日制中专。现在民办学校更注重教学质量，管理更严格，更重视就业和升学。靠口碑生存，每一位老师都把学生当成自己的孩子。
+
+## 14个热门专业
+- 无人机操控与维护：专业飞行训练场，可考民航局无人机执照
+- 新能源汽车制造与检测：整车实训车间，电池电机电控核心技术
+- 网络信息安全：专业攻防实训室，渗透测试/安全运维
+- 计算机应用技术、物联网技术应用、智能设备运行与维护
+- 幼儿保育（适合女生）：学前教育/儿童心理学/艺术
+- 电子信息工程、电子商务（网店运营/直播带货）
+- 机械设计制造、数字媒体技术、工业产品质量检测技术
+- 旅游管理（适合女生）、高考升学班
+选专业建议：兴趣是最好的老师，尊重孩子的兴趣和职业规划。
+
+## 费用
+- 住宿费：800元/学期（6人间电梯房，上床下桌，空调热水器洗衣机）
+- 教科书费：300元/学期
+- 伙食费：早餐1-5元，中晚餐6-8元，月均450-600元
+- 各专业学费不同，建议加叶老师微信了解详细
+
+## 助学政策
+- 农村户口可享国家助学金2000元/年（共两年）
+- 国家免学费：文科1050元/年、理科1350元/年（可免3年）
+- 雨露计划：贫困户3000元/年（共三年）
+- 学校奖学金：600-2000元
+
+## 升学途径
+- 三校生高考班：考全省大学，通过率98%
+- 单招对口升学：每个专业都可参加，100%上大专
+- 普通高考班、五年制大专对接
+- 对接多所高校（江西师范高等专科学校、江西卫生职业学院等）
+
+## 就业保障
+- 除高考班外所有专业包分配就业
+- 订单班/定向班：入学签就业协议
+- 合作企业遍布上海、江苏、广东、深圳、浙江、福建
+- 就业率100%，薪资3500-8000元/月
+
+## 学校管理
+- 封闭式管理，手机上课统一入袋
+- 宿舍：6人间电梯房，独卫空调热水器洗衣机
+- 食堂：三层大食堂，干净卫生经济实惠
+- 作息：6:40起床，22:00熄灯
+- 社团：10-20个（篮球羽毛球乒乓球合唱团书法美术舞蹈等）
+
+## 为什么提前报名
+- 400分以下低分录取名额仅50个
+- 历届生无分录取名额极少
+- 优先选定专业，争取补助名额
+
+## 叶老师微信：Ylc-xianyu
+- 预约参观免费接送
+- 来校前提前联系安排接待
+
+## 回答规则
+1. 保持热情耐心，像朋友聊天
+2. 用口语化中文，不要说套话
+3. 控制150-250字
+4. 不确定的问题引导加叶老师微信
+5. 适度引导报名或加微信
+6. 绝对不能说"不知道"`;
+
+// ==================== 状态 ====================
+let messages = [];
+let isLoading = false;
+let recognition = null;
+let isListening = false;
+
+// ==================== 初始化 ====================
+document.addEventListener('DOMContentLoaded', () => {
+    // 从 localStorage 恢复对话
+    const saved = localStorage.getItem('ai_chat_history');
+    if (saved) {
+        try {
+            const parsed = JSON.parse(saved);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+                messages = parsed;
+                document.getElementById('welcomeArea').style.display = 'none';
+                document.getElementById('quickQuestions').style.display = 'none';
+                renderAllMessages();
+            }
+        } catch(e) {}
+    }
+
+    // 回车发送
+    document.getElementById('chatInput').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
+
+    document.getElementById('chatInput').focus();
+
+    // 检查 API Key 是否配置
+    if (DEEPSEEK_API_KEY === 'sk-你的key填在这里' || DEEPSEEK_API_KEY === '') {
+        const statusDot = document.querySelector('.topbar-info span');
+        if (statusDot) {
+            statusDot.innerHTML = '⚠️ 请先配置API Key';
+            statusDot.style.color = '#fef3c7';
+        }
+        console.warn('⚠️ 请在 ai-chat.html 文件中配置你的 DeepSeek API Key');
+    }
+});
+
+// ==================== 渲染消息 ====================
+function renderAllMessages() {
+    const container = document.getElementById('chatMessages');
+    // 保留欢迎区域和快捷问题（如果有的话先隐藏）
+    const welcome = document.getElementById('welcomeArea');
+    const quick = document.getElementById('quickQuestions');
+    if (messages.length > 0) {
+        if (welcome) welcome.style.display = 'none';
+        if (quick) quick.style.display = 'none';
+    }
+
+    // 清除消息元素（保留 welcome 和 quick）
+    container.querySelectorAll('.msg-row, .typing-indicator').forEach(el => el.remove());
+
+    messages.forEach((msg, idx) => {
+        const row = createMessageElement(msg.role, msg.content, idx);
+        container.appendChild(row);
+    });
+
+    scrollToBottom();
+}
+
+function createMessageElement(role, content, idx) {
+    const row = document.createElement('div');
+    row.className = `msg-row ${role === 'user' ? 'user' : 'bot'}`;
+    row.innerHTML = `
+        <div class="msg-avatar">${role === 'user' ? '👤' : '🤖'}</div>
+        <div>
+            <div class="msg-bubble">${formatContent(content)}</div>
+        </div>
+    `;
+
+    // 给微信ID添加点击复制事件
+    const bubble = row.querySelector('.msg-bubble');
+    bubble.querySelectorAll('.highlight-wechat').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            copyWechat();
+        });
+    });
+
+    return row;
+}
+
+function addMessage(role, content) {
+    messages.push({ role, content });
+    saveHistory();
+
+    const container = document.getElementById('chatMessages');
+    // 隐藏欢迎和快捷问题
+    const welcome = document.getElementById('welcomeArea');
+    const quick = document.getElementById('quickQuestions');
+    if (welcome) welcome.style.display = 'none';
+    if (quick) quick.style.display = 'none';
+
+    const row = createMessageElement(role, content, messages.length - 1);
+    container.appendChild(row);
+    scrollToBottom();
+}
+
+function formatContent(content) {
+    // 高亮微信ID
+    let formatted = content.replace(
+        /(Ylc-xianyu)/g,
+        '<span class="highlight-wechat" title="点击复制">$1</span>'
+    );
+    // 简单的加粗处理（**text**）
+    formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    return formatted;
+}
+
+// ==================== 发送消息 ====================
+async function sendMessage() {
+    if (isLoading) return;
+
+    // 检查 API Key
+    if (DEEPSEEK_API_KEY === 'sk-你的key填在这里' || DEEPSEEK_API_KEY === '') {
+        addMessage('assistant', '⚠️ AI 助手还没配置好。\n\n请在 ai-chat.html 文件中找到 DEEPSEEK_API_KEY，把 "sk-你的key填在这里" 替换成你的真实 API Key。\n\n📱 也可以直接添加叶老师微信：Ylc-xianyu');
+        return;
+    }
+
+    const input = document.getElementById('chatInput');
+    const text = input.value.trim();
+    if (!text) return;
+
+    addMessage('user', text);
+    input.value = '';
+    input.focus();
+    showTyping();
+
+    isLoading = true;
+    document.getElementById('sendBtn').disabled = true;
+
+    try {
+        // 构建 API 请求消息（系统提示词 + 历史对话）
+        const apiMessages = [
+            { role: 'system', content: SYSTEM_PROMPT },
+        ];
+
+        // 加入最近的对话历史
+        const recentMessages = messages.slice(-MAX_HISTORY);
+        recentMessages.forEach(m => {
+            apiMessages.push({ role: m.role, content: m.content });
+        });
+
+        const response = await fetch(DEEPSEEK_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${DEEPSEEK_API_KEY}`,
+            },
+            body: JSON.stringify({
+                model: 'deepseek-chat',
+                messages: apiMessages,
+                temperature: 0.7,
+                max_tokens: 800,
+                top_p: 0.9,
+            }),
+        });
+
+        const data = await response.json();
+        hideTyping();
+
+        if (!response.ok) {
+            const errMsg = data.error?.message || `请求失败 (${response.status})`;
+            console.error('DeepSeek API 错误:', errMsg);
+            addMessage('assistant', '抱歉，AI 服务返回错误 😅\n\n' + errMsg + '\n\n📱 也可以直接添加叶老师微信：Ylc-xianyu');
+        } else if (data.choices?.[0]?.message?.content) {
+            addMessage('assistant', data.choices[0].message.content);
+        } else {
+            addMessage('assistant', '抱歉，我没能理解您的问题。\n\n要不您直接加叶老师微信 Ylc-xianyu，她会为您详细解答～');
+        }
+    } catch (err) {
+        hideTyping();
+        console.error('请求失败:', err);
+
+        let hint = '';
+        if (err.message === 'Failed to fetch' || err.name === 'TypeError') {
+            hint = '可能是网络问题，请检查：\n① 网络连接是否正常\n② DeepSeek API 是否可访问\n③ 浏览器控制台是否有报错\n\n';
+        }
+
+        addMessage('assistant', '抱歉，消息发送失败 😅\n\n' + hint + '请稍后重试，或直接添加叶老师微信：Ylc-xianyu');
+    }
+
+    isLoading = false;
+    document.getElementById('sendBtn').disabled = false;
+    input.focus();
+}
+
+// ==================== 快捷问题 ====================
+function sendQuick(btn) {
+    const text = btn.textContent.trim();
+    document.getElementById('chatInput').value = text;
+    sendMessage();
+}
+
+// ==================== 打字指示器 ====================
+function showTyping() {
+    hideTyping();
+    const container = document.getElementById('chatMessages');
+    const indicator = document.createElement('div');
+    indicator.className = 'typing-indicator';
+    indicator.id = 'typingIndicator';
+    indicator.innerHTML = `
+        <div class="msg-avatar" style="width:34px;height:34px;border-radius:50%;background:#d1fae5;display:flex;align-items:center;justify-content:center;font-size:0.85rem;">🤖</div>
+        <div class="typing-dots"><span></span><span></span><span></span></div>
+    `;
+    container.appendChild(indicator);
+    scrollToBottom();
+}
+
+function hideTyping() {
+    const el = document.getElementById('typingIndicator');
+    if (el) el.remove();
+}
+
+// ==================== 滚动 ====================
+function scrollToBottom() {
+    const container = document.getElementById('chatMessages');
+    setTimeout(() => {
+        container.scrollTop = container.scrollHeight;
+    }, 50);
+}
+
+// ==================== 持久化 ====================
+function saveHistory() {
+    try {
+        localStorage.setItem('ai_chat_history', JSON.stringify(messages));
+    } catch(e) { /* quota exceeded, ignore */ }
+}
+
+// ==================== 清空对话 ====================
+function clearChat() {
+    if (messages.length === 0) return;
+    if (!confirm('确定要开始新对话吗？当前聊天记录将被清空。')) return;
+
+    messages = [];
+    localStorage.removeItem('ai_chat_history');
+
+    const container = document.getElementById('chatMessages');
+    // 显示回欢迎区域
+    const welcome = document.getElementById('welcomeArea');
+    const quick = document.getElementById('quickQuestions');
+    if (welcome) welcome.style.display = '';
+    if (quick) quick.style.display = '';
+
+    // 清除消息元素
+    container.querySelectorAll('.msg-row, .typing-indicator').forEach(el => el.remove());
+
+    document.getElementById('chatInput').focus();
+    showToast('对话已清空，开始新咨询 ✨');
+}
+
+// ==================== 复制微信 ====================
+function copyWechat() {
+    navigator.clipboard.writeText('Ylc-xianyu').then(() => {
+        showToast('✅ 叶老师微信号已复制！打开微信搜索添加好友');
+    }).catch(() => {
+        showToast('微信号：Ylc-xianyu（请手动搜索添加）');
+    });
+}
+
+// ==================== 语音输入 ====================
+function toggleVoice() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+        showToast('您的浏览器不支持语音输入，请使用Chrome浏览器');
+        return;
+    }
+
+    if (isListening) {
+        stopListening();
+    } else {
+        startListening();
+    }
+}
+
+function startListening() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SpeechRecognition();
+    recognition.lang = 'zh-CN';
+    recognition.interimResults = false;
+    recognition.continuous = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.onresult = (event) => {
+        const text = event.results[0][0].transcript;
+        if (text.trim()) {
+            document.getElementById('chatInput').value = text;
+            // 自动发送
+            setTimeout(() => sendMessage(), 300);
+        }
+    };
+
+    recognition.onerror = (e) => {
+        if (e.error === 'no-speech') {
+            showToast('没有检测到语音，请再试一次');
+        } else if (e.error === 'aborted') {
+            // 用户主动停止
+        } else {
+            showToast('语音识别出错，请重试');
+        }
+        stopListening();
+    };
+
+    recognition.onend = () => {
+        stopListening();
+    };
+
+    recognition.start();
+    isListening = true;
+    const btn = document.getElementById('voiceBtn');
+    btn.classList.add('listening');
+    btn.innerHTML = '<i class="fas fa-microphone-alt"></i>';
+    showToast('🎤 正在聆听…请说话');
+}
+
+function stopListening() {
+    if (recognition) {
+        try { recognition.stop(); } catch(e) {}
+    }
+    isListening = false;
+    const btn = document.getElementById('voiceBtn');
+    btn.classList.remove('listening');
+    btn.innerHTML = '<i class="fas fa-microphone"></i>';
+}
+
+// ==================== Toast ====================
+let toastTimer;
+function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>
