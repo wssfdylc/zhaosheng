@@ -215,7 +215,27 @@
 
         .floating-wechat { position: fixed; bottom: 30px; right: 30px; z-index: 999; }
         .floating-wechat-inner { display: flex; align-items: center; gap: 10px; background: #07c160; color: #fff; padding: 14px 24px; border-radius: 50px; cursor: pointer; border: none; font-size: 1rem; font-weight: 600; font-family: inherit; box-shadow: 0 8px 24px rgba(7,193,96,0.4); transition: 0.3s; animation: float-bounce 2s infinite; }
-        @keyframes float-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        @keyframes float-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }        .ai-float-btn {
+            position: fixed; bottom: 100px; right: 30px; z-index: 998;
+            width: 56px; height: 56px; border-radius: 50%;
+            background: linear-gradient(135deg, #0ea87a, #0b8c64);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 24px rgba(14,168,122,0.4);
+            animation: ai-float 3s ease-in-out infinite;
+            text-decoration: none;
+        }
+        .ai-float-btn:hover { animation: none; transform: scale(1.1); }
+        .ai-float-btn span {
+            position: absolute; top: -2px; right: -2px;
+            width: 20px; height: 20px; border-radius: 50%;
+            background: #ef4444; color: #fff; font-size: 0.6rem;
+            font-weight: 700; display: flex; align-items: center; justify-content: center;
+            border: 2px solid #fff;
+        }
+        @keyframes ai-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
         .floating-wechat-inner:hover { background: #06ad56; transform: scale(1.05); animation: none; }
         .wechat-popup { position: absolute; bottom: 70px; right: 0; background: #fff; border-radius: 20px; padding: 28px; box-shadow: var(--shadow-lg); text-align: center; width: 260px; display: none; border: 1px solid var(--border); }
         .wechat-popup.show { display: block; }
@@ -614,6 +634,7 @@
     </footer>
 
     <!-- Floating WeChat -->
+        <a href="ai-chat.html" class="ai-float-btn" title="AI智能咨询"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><circle cx="12" cy="11" r="1.5"/><circle cx="8" cy="11" r="1.5"/><circle cx="16" cy="11" r="1.5"/></svg><span>AI</span></a>
     <div class="floating-wechat" id="floatingWechat">
         <div class="wechat-popup" id="wechatPopup">
             <img src="qrcode.jpg" alt="叶老师微信二维码" style="width:160px;height:160px;border-radius:12px;object-fit:contain;margin:0 auto 12px;display:block;">
