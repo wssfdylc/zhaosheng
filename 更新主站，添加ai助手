@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赣州青年科技职业学校 - 2026年招生简章 | 技能成才 · 升学有路</title>
+    <meta name="description" content="赣州青年科技职业学校2026年招生进行中，开设无人机、新能源汽车、网络信息安全、计算机等14个热门专业。技能+升学+就业三位一体，校企合作订单培养。在线咨询报名，添加叶老师微信了解更多。">
+    <meta name="keywords" content="赣州青年科技职业学校,赣州职业学校,赣州中专,招生,无人机专业,计算机专业,新能源汽车专业,2026招生,技能培训,赣州中专招生,赣州职校">
+    <meta name="author" content="赣州青年科技职业学校招生办">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.qnkjxx.com">
+    <!-- Open Graph / 微信/QQ/微博分享预览 -->
+    <meta property="og:title" content="赣州青年科技职业学校 - 2026招生简章 | 叶老师在线咨询">
+    <meta property="og:description" content="14个热门专业，技能+升学+就业三位一体。无人机、新能源、网络安全等专业火热招生中！">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.qnkjxx.com">
+    <meta property="og:site_name" content="赣州青年科技职业学校">
+    <!-- 微信分享专用 -->
+    <meta itemprop="name" content="赣州青年科技职业学校 - 2026招生简章">
+    <meta itemprop="description" content="14个热门专业，技能+升学+就业，校企订单培养。叶老师：Ylc-xianyu">
+    <!-- 结构化数据 / 搜索引擎 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "赣州青年科技职业学校",
+        "description": "全日制综合性中等职业学校，开设无人机、新能源汽车、网络信息安全、计算机等14个热门专业",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "赣州",
+            "addressRegion": "江西",
+            "streetAddress": "经济技术开发区湖边镇湖边大道1号"
+        },
+        "telephone": "+86-18162182833",
+        "url": "https://www.qnkjxx.com"
+    }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0ea87a;
+            --primary-dark: #0b8c64;
+            --primary-light: #e6f7f1;
+            --accent: #f59e0b;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --bg: #ffffff;
+            --bg-gray: #f8fafc;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.04);
+            --radius: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: var(--text); background: var(--bg); line-height: 1.7; overflow-x: hidden;
+        }
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+            z-index: 1000; transition: 0.3s;
+        }
+        .navbar.scrolled { box-shadow: var(--shadow); }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 24px; height: 68px;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; font-weight: 700; color: var(--primary-dark); text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.2rem; }
+        .nav-links { display: flex; list-style: none; gap: 4px; }
+        .nav-links a { text-decoration: none; color: var(--text-light); padding: 8px 14px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); background: var(--primary-light); }
+        .nav-cta { background: var(--primary) !important; color: #fff !important; padding: 10px 18px !important; font-weight: 600 !important; }
+        .nav-cta:hover { background: var(--primary-dark) !important; color: #fff !important; }
+        .mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text); cursor: pointer; }
+
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            background: linear-gradient(170deg, #f0fdf7 0%, #e6f7f1 30%, #ffffff 80%);
+            padding: 100px 24px 80px; position: relative; overflow: hidden;
+        }
+        .hero::before { content: ''; position: absolute; top: -200px; right: -150px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(14,168,122,0.08) 0%, transparent 70%); border-radius: 50%; }
+        .hero::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(14,168,122,0.05) 0%, transparent 70%); border-radius: 50%; }
+        .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; width: 100%; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--primary-light); color: var(--primary-dark); padding: 6px 16px; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 20px; }
+        .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); animation: pulse-dot 2s infinite; }
+        @keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.25; color: var(--text); margin-bottom: 16px; letter-spacing: -0.5px; }
+        .hero h1 .highlight { color: var(--primary); position: relative; }
+        .hero h1 .highlight::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 8px; background: var(--primary-light); z-index: -1; border-radius: 4px; }
+        .hero-desc { font-size: 1.125rem; color: var(--text-light); margin-bottom: 32px; max-width: 480px; }
+        .hero-stats { display: flex; gap: 32px; margin-bottom: 36px; }
+        .hero-stat { text-align: center; }
+        .hero-stat-number { font-size: 2rem; font-weight: 800; color: var(--primary-dark); }
+        .hero-stat-label { font-size: 0.8rem; color: var(--text-light); margin-top: 2px; }
+        .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: 0.3s; white-space: nowrap; }
+        .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 4px 14px rgba(14,168,122,0.35); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(14,168,122,0.45); }
+        .btn-outline { background: #fff; color: var(--primary); border: 2px solid var(--primary); }
+        .btn-outline:hover { background: var(--primary-light); transform: translateY(-2px); }
+        .btn-wechat { background: #07c160; color: #fff; box-shadow: 0 4px 14px rgba(7,193,96,0.35); }
+        .btn-wechat:hover { background: #06ad56; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(7,193,96,0.45); }
+        .hero-visual { display: flex; justify-content: center; align-items: center; }
+        .hero-image-placeholder { width: 460px; height: 360px; background: linear-gradient(135deg, #d1fae5, #a7f3d0, #6ee7b7); border-radius: 24px; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 25px 50px -12px rgba(14,168,122,0.2); }
+        .hero-image-placeholder i { font-size: 6rem; color: rgba(255,255,255,0.7); }
+        .hero-image-placeholder .img-label { position: absolute; bottom: 20px; font-size: 0.85rem; color: rgba(255,255,255,0.9); font-weight: 500; }
+        .hero-float-card { position: absolute; bottom: -20px; left: -30px; background: #fff; border-radius: 16px; padding: 16px 20px; box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 12px; }
+        .hero-float-card .w-icon { width: 44px; height: 44px; border-radius: 12px; background: #07c160; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.3rem; }
+        .hero-float-card .w-text { font-size: 0.85rem; }
+        .hero-float-card .w-text strong { display: block; color: var(--text); font-size: 0.95rem; }
+
+        section { padding: 90px 24px; }
+        .section-label { display: inline-block; color: var(--primary); font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+        .section-title { font-size: 2.25rem; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.5px; }
+        .section-subtitle { font-size: 1.1rem; color: var(--text-light); margin-bottom: 48px; max-width: 600px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        #about { background: #fff; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-image { width: 100%; height: 400px; background: linear-gradient(135deg, #dbeafe, #bfdbfe, #93c5fd); border-radius: 24px; display: flex; align-items: center; justify-content: center; position: relative; }
+        .about-image i { font-size: 5rem; color: rgba(255,255,255,0.6); }
+        .about-features { list-style: none; display: grid; gap: 14px; margin-top: 24px; }
+        .about-features li { display: flex; align-items: flex-start; gap: 12px; padding: 14px 18px; background: var(--bg-gray); border-radius: var(--radius); font-size: 0.95rem; }
+        .about-features li i { color: var(--primary); font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; }
+
+        #advantages { background: var(--bg-gray); }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+        .card { background: #fff; border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); transition: 0.3s; border: 1px solid transparent; }
+        .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--primary-light); }
+        .card-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; }
+        .card-icon.green { background: #d1fae5; color: #059669; }
+        .card-icon.blue { background: #dbeafe; color: #2563eb; }
+        .card-icon.amber { background: #fef3c7; color: #d97706; }
+        .card-icon.purple { background: #ede9fe; color: #7c3aed; }
+        .card h3 { font-size: 1.15rem; margin-bottom: 8px; color: var(--text); }
+        .card p { font-size: 0.925rem; color: var(--text-light); }
+
+        #majors { background: #fff; }
+        .majors-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+        .major-tag { display: flex; align-items: center; gap: 8px; padding: 16px 18px; background: var(--bg-gray); border-radius: var(--radius); font-size: 0.95rem; font-weight: 600; border: 1px solid var(--border); transition: 0.3s; cursor: default; }
+        .major-tag:hover { border-color: var(--primary); background: var(--primary-light); }
+        .major-tag i { color: var(--primary); font-size: 1.1rem; }
+        .majors-highlight { margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .major-card { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: 0.3s; }
+        .major-card:hover { border-color: var(--primary); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+        .major-card-image { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: rgba(255,255,255,0.7); }
+        .major-card-image.m1 { background: linear-gradient(135deg, #d1fae5, #6ee7b7); }
+        .major-card-image.m2 { background: linear-gradient(135deg, #dbeafe, #93c5fd); }
+        .major-card-image.m3 { background: linear-gradient(135deg, #fef3c7, #fcd34d); }
+        .major-card-image.m4 { background: linear-gradient(135deg, #ede9fe, #c4b5fd); }
+        .major-card-body { padding: 20px 24px; }
+        .major-card-body h3 { font-size: 1.1rem; margin-bottom: 6px; }
+        .major-card-body p { font-size: 0.875rem; color: var(--text-light); }
+
+        #admissions { background: var(--bg-gray); }
+        .admissions-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+        .admissions-info h2 { margin-bottom: 24px; }
+        .admissions-info .info-list { list-style: none; display: grid; gap: 14px; }
+        .admissions-info .info-list li { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #fff; border-radius: 10px; border-left: 3px solid var(--primary); font-size: 0.95rem; }
+        .admissions-info .info-list li i { color: var(--primary); flex-shrink: 0; }
+        .info-list .highlight-text { color: var(--primary-dark); font-weight: 600; }
+
+        .form-card { background: #fff; border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow-lg); border: 1px solid var(--border); position: sticky; top: 100px; }
+        .form-card h3 { font-size: 1.35rem; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+        .form-card h3 .badge { font-size: 0.7rem; background: #fef2f2; color: #dc2626; padding: 3px 10px; border-radius: 20px; font-weight: 600; }
+        .form-card .form-subtitle { font-size: 0.9rem; color: var(--text-light); margin-bottom: 24px; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+        .form-group label .required { color: #dc2626; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 1.5px solid var(--border); border-radius: 10px; font-size: 0.95rem; font-family: inherit; transition: 0.3s; background: var(--bg-gray); }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(14,168,122,0.1); background: #fff; }
+        .form-submit { width: 100%; padding: 14px; background: var(--primary); color: #fff; border: none; border-radius: 50px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.3s; margin-top: 8px; }
+        .form-submit:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(14,168,122,0.35); }
+        .form-agreement { font-size: 0.8rem; color: var(--text-light); text-align: center; margin-top: 12px; }
+
+        #wechat { background: linear-gradient(170deg, #f0fdf7, #ffffff); }
+        .wechat-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1000px; margin: 0 auto; }
+        .wechat-text h2 { font-size: 2rem; font-weight: 800; margin-bottom: 16px; }
+        .wechat-text p { color: var(--text-light); margin-bottom: 24px; }
+        .wechat-text .wechat-highlights { list-style: none; display: grid; gap: 12px; }
+        .wechat-text .wechat-highlights li { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; font-weight: 500; }
+        .wechat-text .wechat-highlights li i { color: #07c160; font-size: 1.1rem; }
+        .wechat-qr-wrapper { display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 24px; padding: 40px; box-shadow: var(--shadow-lg); border: 2px dashed #d1fae5; }
+        .qr-placeholder { width: 220px; height: 220px; background: #f0fdf7; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--primary-dark); border: 2px solid #d1fae5; margin-bottom: 20px; }
+        .qr-placeholder i { font-size: 4rem; color: #07c160; }
+        .qr-placeholder span { font-size: 0.85rem; font-weight: 500; }
+        .wechat-qr-wrapper .wechat-id { font-size: 1rem; font-weight: 700; color: var(--text); }
+        .wechat-qr-wrapper .wechat-tip { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+
+        #faq { background: #fff; }
+        .faq-list { max-width: 800px; margin: 0 auto; display: grid; gap: 12px; }
+        .faq-item { background: var(--bg-gray); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+        .faq-question { width: 100%; padding: 20px 24px; background: none; border: none; font-size: 1rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; cursor: pointer; color: var(--text); font-family: inherit; text-align: left; }
+        .faq-question i { transition: 0.3s; color: var(--text-light); }
+        .faq-item.open .faq-question i { transform: rotate(180deg); color: var(--primary); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-item.open .faq-answer { max-height: 400px; }
+        .faq-answer-inner { padding: 0 24px 20px; font-size: 0.95rem; color: var(--text-light); }
+
+        footer { background: #0f172a; color: #cbd5e1; padding: 48px 24px 24px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+        .footer-brand h3 { color: #fff; font-size: 1.15rem; margin-bottom: 8px; }
+        .footer-brand p { font-size: 0.875rem; line-height: 1.8; }
+        .footer-links h4 { color: #fff; font-size: 0.95rem; margin-bottom: 12px; }
+        .footer-links a { display: block; color: #94a3b8; text-decoration: none; font-size: 0.875rem; margin-bottom: 8px; transition: 0.2s; }
+        .footer-links a:hover { color: #fff; }
+        .footer-bottom { max-width: 1200px; margin: 32px auto 0; padding-top: 24px; border-top: 1px solid #1e293b; text-align: center; font-size: 0.8rem; color: #64748b; }
+        .footer-wechat-btn { display: inline-flex; align-items: center; gap: 8px; background: #07c160; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.875rem; margin-top: 12px; transition: 0.3s; }
+        .footer-wechat-btn:hover { background: #06ad56; }
+
+        .floating-wechat { position: fixed; bottom: 30px; right: 30px; z-index: 999; }
+        .floating-wechat-inner { display: flex; align-items: center; gap: 10px; background: #07c160; color: #fff; padding: 14px 24px; border-radius: 50px; cursor: pointer; border: none; font-size: 1rem; font-weight: 600; font-family: inherit; box-shadow: 0 8px 24px rgba(7,193,96,0.4); transition: 0.3s; animation: float-bounce 2s infinite; }
+        @keyframes float-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        .floating-wechat-inner:hover { background: #06ad56; transform: scale(1.05); animation: none; }
+        .wechat-popup { position: absolute; bottom: 70px; right: 0; background: #fff; border-radius: 20px; padding: 28px; box-shadow: var(--shadow-lg); text-align: center; width: 260px; display: none; border: 1px solid var(--border); }
+        .wechat-popup.show { display: block; }
+
+        .toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #059669; color: #fff; padding: 14px 28px; border-radius: 50px; font-weight: 600; z-index: 2000; box-shadow: 0 8px 24px rgba(5,150,105,0.3); display: none; }
+        .toast.show { display: block; animation: slideDown 0.3s ease; }
+        @keyframes slideDown { from { transform: translateX(-50%) translateY(-20px); opacity: 0; } to { transform: translateX(-50%) translateY(0); opacity: 1; } }
+
+        @media (max-width: 1024px) {
+            .hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .hero-desc { margin: 0 auto 24px; }
+            .hero-stats { justify-content: center; }
+            .hero-buttons { justify-content: center; }
+            .hero-visual { order: -1; }
+            .hero-image-placeholder { width: 320px; height: 250px; }
+            .hero h1 { font-size: 2rem; }
+            .hero-float-card { display: none; }
+            .about-grid { grid-template-columns: 1fr; }
+            .admissions-wrapper { grid-template-columns: 1fr; }
+            .form-card { position: static; }
+            .wechat-inner { grid-template-columns: 1fr; text-align: center; }
+            .wechat-text .wechat-highlights li { justify-content: center; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.mobile-open { display: flex; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: #fff; padding: 16px; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-lg); }
+            .mobile-toggle { display: block; }
+            section { padding: 60px 20px; }
+            .section-title { font-size: 1.75rem; }
+            .hero { padding: 100px 20px 60px; }
+            .hero h1 { font-size: 1.65rem; }
+            .hero-stats { gap: 20px; }
+            .hero-stat-number { font-size: 1.5rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .majors-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+            .floating-wechat-inner { padding: 12px 20px; font-size: 0.9rem; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.4rem; }
+            .btn { padding: 12px 20px; font-size: 0.875rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .hero-image-placeholder { width: 260px; height: 200px; }
+            .form-card { padding: 24px; }
+            .majors-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ==================== AI 智能咨询聊天助手 ==================== */
+        .ai-chat-btn {
+            position: fixed; bottom: 100px; right: 30px; z-index: 998;
+            width: 60px; height: 60px; border-radius: 50%;
+            background: linear-gradient(135deg, #0ea87a, #0b8c64);
+            border: none; cursor: pointer;
+            box-shadow: 0 8px 24px rgba(14,168,122,0.4);
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.3s ease; animation: ai-float 3s ease-in-out infinite;
+        }
+        .ai-chat-btn:hover {
+            transform: scale(1.1); box-shadow: 0 12px 32px rgba(14,168,122,0.55);
+            animation: none;
+        }
+        .ai-chat-btn:active { transform: scale(0.95); }
+        .ai-chat-btn svg { width: 28px; height: 28px; fill: #fff; }
+        .ai-chat-btn .badge {
+            position: absolute; top: -4px; right: -4px;
+            width: 22px; height: 22px; border-radius: 50%;
+            background: #ef4444; color: #fff; font-size: 0.6rem;
+            font-weight: 700; display: flex; align-items: center; justify-content: center;
+            border: 2px solid #fff; animation: pulse-badge 2s infinite;
+        }
+        @keyframes pulse-badge {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(239,68,68,0); }
+        }
+        @keyframes ai-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* 聊天窗口 */
+        .ai-chat-window {
+            position: fixed; bottom: 100px; right: 30px; z-index: 997;
+            width: 380px; height: 540px; max-height: calc(100vh - 130px);
+            background: #fff; border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+            display: flex; flex-direction: column; overflow: hidden;
+            transform-origin: bottom right;
+            transform: scale(0); opacity: 0; pointer-events: none;
+            transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+        }
+        .ai-chat-window.open {
+            transform: scale(1); opacity: 1; pointer-events: all;
+        }
+
+        /* 聊天头部 */
+        .ai-chat-header {
+            background: linear-gradient(135deg, #0ea87a, #0b8c64);
+            color: #fff; padding: 16px 20px;
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 12px; flex-shrink: 0;
+        }
+        .ai-chat-header-left { display: flex; align-items: center; gap: 10px; }
+        .ai-chat-avatar {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem;
+        }
+        .ai-chat-header h4 { font-size: 0.95rem; font-weight: 700; margin: 0; }
+        .ai-chat-header .status-dot {
+            font-size: 0.7rem; opacity: 0.85; display: flex; align-items: center; gap: 4px;
+        }
+        .ai-chat-header .status-dot::before {
+            content: ''; width: 8px; height: 8px; border-radius: 50%;
+            background: #4ade80; display: inline-block; animation: pulse-dot 2s infinite;
+        }
+        .ai-chat-close {
+            width: 32px; height: 32px; border-radius: 50%; border: none;
+            background: rgba(255,255,255,0.2); color: #fff; cursor: pointer;
+            font-size: 1rem; display: flex; align-items: center; justify-content: center;
+            transition: 0.2s;
+        }
+        .ai-chat-close:hover { background: rgba(255,255,255,0.35); }
+
+        /* 聊天消息区域 */
+        .ai-chat-body {
+            flex: 1; overflow-y: auto; padding: 16px;
+            background: #f8fafc; display: flex; flex-direction: column; gap: 12px;
+            scroll-behavior: smooth;
+        }
+        .ai-chat-body::-webkit-scrollbar { width: 4px; }
+        .ai-chat-body::-webkit-scrollbar-track { background: transparent; }
+        .ai-chat-body::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+
+        /* 消息气泡 */
+        .ai-msg { display: flex; gap: 8px; max-width: 90%; animation: msg-in 0.3s ease; }
+        @keyframes msg-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .ai-msg.assistant { align-self: flex-start; }
+        .ai-msg.user { align-self: flex-end; flex-direction: row-reverse; }
+        .ai-msg .avatar {
+            width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center; font-size: 0.8rem;
+        }
+        .ai-msg.assistant .avatar { background: #d1fae5; color: #059669; }
+        .ai-msg.user .avatar { background: #dbeafe; color: #2563eb; }
+        .ai-msg .bubble {
+            padding: 10px 14px; border-radius: 14px; font-size: 0.9rem; line-height: 1.6;
+            word-break: break-word; white-space: pre-wrap;
+        }
+        .ai-msg.assistant .bubble {
+            background: #fff; color: var(--text); border: 1px solid #e2e8f0;
+            border-bottom-left-radius: 4px;
+        }
+        .ai-msg.user .bubble {
+            background: linear-gradient(135deg, #0ea87a, #0b8c64); color: #fff;
+            border-bottom-right-radius: 4px;
+        }
+        .ai-msg .bubble .wechat-highlight {
+            display: inline-block; background: #fef3c7; color: #92400e;
+            padding: 2px 8px; border-radius: 4px; font-weight: 600;
+            cursor: pointer; margin: 4px 0; transition: 0.2s;
+        }
+        .ai-msg .bubble .wechat-highlight:hover { background: #fde68a; }
+
+        /* 打字指示器 */
+        .ai-typing {
+            display: flex; gap: 8px; align-items: center; padding: 0 4px;
+            align-self: flex-start;
+        }
+        .ai-typing .dots { display: flex; gap: 4px; }
+        .ai-typing .dots span {
+            width: 8px; height: 8px; border-radius: 50%; background: #94a3b8;
+            animation: typing-bounce 1.4s ease-in-out infinite;
+        }
+        .ai-typing .dots span:nth-child(2) { animation-delay: 0.2s; }
+        .ai-typing .dots span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes typing-bounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-6px); }
+        }
+
+        /* 快捷问题 */
+        .ai-suggestions {
+            display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 0;
+        }
+        .ai-suggestion-chip {
+            padding: 8px 14px; background: #fff; border: 1px solid #d1fae5;
+            border-radius: 50px; font-size: 0.8rem; color: #0ea87a;
+            cursor: pointer; transition: 0.2s; font-family: inherit;
+            white-space: nowrap;
+        }
+        .ai-suggestion-chip:hover {
+            background: #d1fae5; border-color: #0ea87a; color: #0b8c64;
+        }
+
+        /* 输入区域 */
+        .ai-chat-footer {
+            padding: 12px 16px; border-top: 1px solid #e2e8f0; flex-shrink: 0;
+            background: #fff; display: flex; gap: 8px; align-items: center;
+        }
+        .ai-chat-footer input {
+            flex: 1; padding: 10px 16px; border: 1.5px solid #e2e8f0;
+            border-radius: 50px; font-size: 0.9rem; font-family: inherit;
+            outline: none; transition: 0.3s; background: #f8fafc;
+        }
+        .ai-chat-footer input:focus {
+            border-color: #0ea87a; box-shadow: 0 0 0 3px rgba(14,168,122,0.1);
+            background: #fff;
+        }
+        .ai-chat-send {
+            width: 44px; height: 44px; border-radius: 50%; border: none;
+            background: linear-gradient(135deg, #0ea87a, #0b8c64); color: #fff;
+            cursor: pointer; flex-shrink: 0; display: flex; align-items: center;
+            justify-content: center; transition: 0.2s; font-size: 1rem;
+        }
+        .ai-chat-send:hover { background: #0b8c64; transform: scale(1.05); }
+        .ai-chat-send:disabled { background: #94a3b8; cursor: not-allowed; transform: none; }
+
+        /* 错误提示 */
+        .ai-chat-error {
+            text-align: center; padding: 12px; margin: 8px 0;
+            background: #fef2f2; border-radius: 10px; color: #dc2626;
+            font-size: 0.8rem; display: none;
+        }
+        .ai-chat-error.show { display: block; }
+
+        /* 移动端适配 */
+        @media (max-width: 480px) {
+            .ai-chat-window {
+                width: calc(100vw - 20px); height: calc(100vh - 120px);
+                bottom: 80px; right: 10px; border-radius: 16px 16px 0 0;
+            }
+            .ai-chat-btn { bottom: 80px; right: 16px; width: 52px; height: 52px; }
+            .ai-msg { max-width: 95%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="toast" id="toast">✅ 提交成功！叶老师将尽快联系您</div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-school"></i></div>
+                青年科技
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">学校简介</a></li>
+                <li><a href="#advantages">办学优势</a></li>
+                <li><a href="#majors">热门专业</a></li>
+                <li><a href="#admissions">招生报名</a></li>
+                <li><a href="#wechat" class="nav-cta"><i class="fa-brands fa-weixin"></i> 微信咨询</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="菜单"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge"><span class="dot"></span> 2026年秋季招生正式启动</div>
+                <h1>赣州<span class="highlight">青年科技</span>职业学校<br>技能成才 · 升学有路</h1>
+                <p class="hero-desc">
+                    全日制综合性中等职业学校 · 招生代码 <strong>3636000425</strong>
+                    <br>14个热门专业 · 校企订单培养 · 入学推荐就业
+                </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">14个</div>
+                        <div class="hero-stat-label">热门专业</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">3600+</div>
+                        <div class="hero-stat-label">在校学生</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">3.5亿</div>
+                        <div class="hero-stat-label">总投资</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#admissions" class="btn btn-primary"><i class="fas fa-edit"></i> 在线报名咨询</a>
+                    <a href="#wechat" class="btn btn-wechat"><i class="fa-brands fa-weixin"></i> 添加微信咨询</a>
+                    <a href="#majors" class="btn btn-outline">查看专业 <i class="fas fa-arrow-down"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-placeholder" style="background:none;">
+                    <img src="campus1.jpg" alt="赣州青年科技职业学校校园实景" style="width:100%;height:100%;object-fit:cover;border-radius:24px;">
+                    <div class="hero-float-card">
+                        <div class="w-icon"><i class="fa-brands fa-weixin"></i></div>
+                        <div class="w-text">叶老师<strong>扫码立即咨询 →</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <span class="section-label">学校简介</span>
+            <h2 class="section-title">了解赣州青年科技职业学校</h2>
+            <p class="section-subtitle">立足赣州、服务江西，打造新时代技能人才摇篮。我们坚持"技能成才、升学有路、就业有门"的办学理念。</p>
+            <div class="about-grid">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                    <img src="campus2.jpg" alt="校园环境" style="width:100%;height:400px;object-fit:cover;border-radius:24px;">
+                    <img src="campus3.jpg" alt="校园设施" style="width:100%;height:400px;object-fit:cover;border-radius:24px;">
+                </div>
+                <div>
+                    <p style="font-size:1.05rem;line-height:1.9;color:var(--text-light);">
+                        赣州青年科技职业学校是经<strong>赣州市教育局</strong>批准设立的全日制综合性中等职业学校（招生代码：3636000425）。学校坐落于<strong>赣州经济技术开发区湖边镇湖边大道1号</strong>，占地面积<strong>112.88亩</strong>，建筑面积<strong>63,572平方米</strong>，总投资<strong>3.5亿元</strong>。现有在校学生<strong>3,600余人</strong>，教职工<strong>200余人</strong>，其中专任教师148人、双师型教师38人。
+                    </p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i><span><strong>正规办学资质</strong> — 经赣州市教育局批准设立，学历国家承认、全国通用</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>双师型教师团队</strong> — 专任教师148人 + 双师型教师38人，理论+实操双保障</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>现代化校园设施</strong> — 6人间电梯公寓（上床下桌）、空调热水器洗衣机全覆盖</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>校企订单培养</strong> — 入学签订就业协议，毕业推荐对口就业岗位</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages -->
+    <section id="advantages">
+        <div class="container">
+            <span class="section-label">办学优势</span>
+            <h2 class="section-title">为什么选择青年科技？</h2>
+            <p class="section-subtitle">技能 + 升学 + 就业，三位一体培养模式，让每位学生都有人生出彩的机会。</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon green"><i class="fas fa-handshake"></i></div>
+                    <h3>校企合作订单培养</h3>
+                    <p>与20余家知名企业深度合作，入学即签订就业推荐协议。企业技师驻校授课，学习内容与岗位需求无缝对接。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon blue"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>升学渠道畅通</h3>
+                    <p>开设高考升学班，可通过职教高考、单招等途径升入本科/大专院校。文化课+专业课同步教学，升学有保障。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon amber"><i class="fas fa-tools"></i></div>
+                    <h3>实训设备一流</h3>
+                    <p>拥有无人机飞行实训场、新能源汽车维修车间、工业机器人实训室、网络安全攻防实验室等现代化实训基地。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon purple"><i class="fas fa-yen-sign"></i></div>
+                    <h3>国家资助完善</h3>
+                    <p>符合条件的可享国家免学费（最高1350元/年）、国家助学金2300元/年、雨露计划3000元/年等多项资助政策。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Majors -->
+    <section id="majors">
+        <div class="container">
+            <span class="section-label">热门专业</span>
+            <h2 class="section-title">14个热门专业任你选</h2>
+            <p class="section-subtitle">紧贴市场需求设置专业，每个专业都配备专业实训场地。</p>
+
+            <!-- All majors tags -->
+            <div class="majors-grid">
+                <div class="major-tag"><i class="fas fa-drone"></i> 无人机操控与维护</div>
+                <div class="major-tag"><i class="fas fa-car"></i> 新能源汽车制造与检测</div>
+                <div class="major-tag"><i class="fas fa-shield-haltered"></i> 网络信息安全</div>
+                <div class="major-tag"><i class="fas fa-laptop-code"></i> 计算机应用技术</div>
+                <div class="major-tag"><i class="fas fa-wifi"></i> 物联网技术应用</div>
+                <div class="major-tag"><i class="fas fa-robot"></i> 智能设备运行与维护</div>
+                <div class="major-tag"><i class="fas fa-baby"></i> 幼儿保育</div>
+                <div class="major-tag"><i class="fas fa-microchip"></i> 电子信息工程</div>
+                <div class="major-tag"><i class="fas fa-shopping-cart"></i> 电子商务</div>
+                <div class="major-tag"><i class="fas fa-cogs"></i> 机械设计制造</div>
+                <div class="major-tag"><i class="fas fa-paint-brush"></i> 数字媒体技术</div>
+                <div class="major-tag"><i class="fas fa-clipboard-check"></i> 工业产品质量检测技术</div>
+                <div class="major-tag"><i class="fas fa-plane-departure"></i> 旅游管理</div>
+                <div class="major-tag"><i class="fas fa-book-open"></i> 高考升学班</div>
+            </div>
+
+            <!-- Highlight 4 featured majors -->
+            <div class="majors-highlight">
+                <div class="major-card">
+                    <div class="major-card-image m1"><i class="fas fa-drone"></i></div>
+                    <div class="major-card-body">
+                        <h3>🚁 无人机操控与维护</h3>
+                        <p>配备专业无人机飞行训练场，学习航拍、测绘、植保、巡检等应用技能。可考取民航局无人机驾驶员执照，就业前景广阔。</p>
+                    </div>
+                </div>
+                <div class="major-card">
+                    <div class="major-card-image m2"><i class="fas fa-car"></i></div>
+                    <div class="major-card-body">
+                        <h3>🚗 新能源汽车制造与检测</h3>
+                        <p>拥有新能源整车实训车间，涵盖电池、电机、电控三大核心技术。与赣州新能源汽车产业园企业深度合作，订单式培养。</p>
+                    </div>
+                </div>
+                <div class="major-card">
+                    <div class="major-card-image m3"><i class="fas fa-shield-haltered"></i></div>
+                    <div class="major-card-body">
+                        <h3>🔒 网络信息安全</h3>
+                        <p>搭建专业网络安全攻防实训室，学习渗透测试、安全运维、数据加密等技能。网络安全人才需求旺盛，薪资待遇优厚。</p>
+                    </div>
+                </div>
+                <div class="major-card">
+                    <div class="major-card-image m4"><i class="fas fa-book-open"></i></div>
+                    <div class="major-card-body">
+                        <h3>📚 高考升学班</h3>
+                        <p>专为有志升学的学生设计，文化课+专业课同步教学。通过职教高考、高职单招等渠道升入理想大学，圆你大学梦。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions -->
+    <section id="admissions">
+        <div class="container">
+            <span class="section-label">招生报名</span>
+            <h2 class="section-title">2026年秋季招生简章</h2>
+            <p class="section-subtitle">名额有限，欢迎家长和学生前来咨询报名。</p>
+            <div class="admissions-wrapper">
+                <div class="admissions-info">
+                    <h2 style="font-size:1.35rem;">📋 招生信息</h2>
+                    <ul class="info-list">
+                        <li><i class="fas fa-qrcode"></i><span><strong>招生代码：</strong><span class="highlight-text">3636000425</span></span></li>
+                        <li><i class="fas fa-school-flag"></i><span><strong>学校性质：</strong>全日制综合性民办中等职业学校</span></li>
+                        <li><i class="fas fa-calendar-alt"></i><span><strong>报名时间：</strong><span class="highlight-text">即日起至2026年8月31日</span></span></li>
+                        <li><i class="fas fa-user-graduate"></i><span><strong>招生对象：</strong>应往届初中毕业生及同等学力者</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i><span><strong>学校地址：</strong>江西省赣州经济技术开发区湖边镇湖边大道1号</span></li>
+                        <li><i class="fas fa-hotel"></i><span><strong>住宿条件：</strong>6人间电梯房（上床下桌），空调/热水器/洗衣机俱全</span></li>
+                        <li><i class="fas fa-yen-sign"></i><span><strong>住宿费：</strong>800元/学期 &nbsp;|&nbsp; <strong>教科书费：</strong>300元/学期</span></li>
+                    </ul>
+                    <p style="margin-top:20px;padding:16px;background:#fef3c7;border-radius:10px;font-size:0.9rem;">
+                        <i class="fas fa-exclamation-triangle" style="color:#d97706;"></i>
+                        <strong>温馨提示：</strong>各专业名额有限，建议尽早报名。填写右侧表单后，叶老师将在<strong>24小时内</strong>与您联系。
+                    </p>
+                </div>
+
+                <div class="form-card" id="formCard">
+                    <h3>📝 在线咨询报名 <span class="badge">限时名额</span></h3>
+                    <p class="form-subtitle">填写信息，叶老师将第一时间与您沟通</p>
+                    <form id="inquiryForm" action="https://formspree.io/f/xzdqdyjj" method="POST">
+                        <div class="form-group">
+                            <label>学生姓名 <span class="required">*</span></label>
+                            <input type="text" name="studentName" placeholder="请输入学生姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label>家长手机号 <span class="required">*</span></label>
+                            <input type="tel" name="phone" placeholder="请输入手机号码" required>
+                        </div>
+                        <div class="form-group">
+                            <label>毕业初中</label>
+                            <input type="text" name="school" placeholder="请输入初中学校名称">
+                        </div>
+                        <div class="form-group">
+                            <label>意向专业（可多选）</label>
+                            <select name="major" multiple style="height:120px;">
+                                <option value="无人机">无人机操控与维护</option>
+                                <option value="新能源">新能源汽车制造与检测</option>
+                                <option value="网络安全">网络信息安全</option>
+                                <option value="计算机">计算机应用技术</option>
+                                <option value="物联网">物联网技术应用</option>
+                                <option value="智能设备">智能设备运行与维护</option>
+                                <option value="幼儿保育">幼儿保育</option>
+                                <option value="电子信息">电子信息工程</option>
+                                <option value="电子商务">电子商务</option>
+                                <option value="机械">机械设计制造</option>
+                                <option value="数媒">数字媒体技术</option>
+                                <option value="质检">工业产品质量检测技术</option>
+                                <option value="旅游">旅游管理</option>
+                                <option value="高考升学">高考升学班</option>
+                            </select>
+                            <span style="font-size:0.75rem;color:var(--text-light);">按住Ctrl可多选</span>
+                        </div>
+                        <div class="form-group">
+                            <label>备注留言</label>
+                            <textarea name="message" rows="3" placeholder="如有其他问题，请在此留言..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> 提交报名意向</button>
+                        <p class="form-agreement">提交即表示您同意我们通过电话或微信与您联系</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WeChat -->
+    <section id="wechat">
+        <div class="container">
+            <span class="section-label">微信咨询</span>
+            <div class="wechat-inner">
+                <div class="wechat-text">
+                    <h2>添加叶老师微信<br>一对一为您解答</h2>
+                    <p>扫描右侧二维码或搜索微信号添加，叶老师将为您提供：</p>
+                    <ul class="wechat-highlights">
+                        <li><i class="fa-brands fa-weixin"></i> 各专业详细介绍与就业前景分析</li>
+                        <li><i class="fa-brands fa-weixin"></i> 招生政策与助学资助一对一解读</li>
+                        <li><i class="fa-brands fa-weixin"></i> 校园参观预约 + 免费接送安排</li>
+                        <li><i class="fa-brands fa-weixin"></i> 升学规划 & 职业发展免费咨询</li>
+                    </ul>
+                    <p style="margin-top:20px;font-weight:600;color:var(--primary-dark);">
+                        📱 微信号：<strong style="font-size:1.1rem;">Ylc-xianyu</strong>
+                    </p>
+                </div>
+                <div class="wechat-qr-wrapper">
+                    <img src="qrcode.jpg" alt="叶老师微信二维码" style="width:220px;height:220px;border-radius:16px;object-fit:contain;margin-bottom:20px;">
+                    <div class="wechat-id"><i class="fa-brands fa-weixin" style="color:#07c160;"></i> 叶老师</div>
+                    <div class="wechat-tip">长按或扫描二维码添加好友</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <span class="section-label">常见问题</span>
+            <h2 class="section-title">家长最关心的问题</h2>
+            <p class="section-subtitle">我们整理了家长们最常问的问题，方便您快速了解。</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">学校的招生对象和报名条件是什么？<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">招收应往届初中毕业生及同等学力者，无中考成绩要求。报名需提供身份证（或户口本）、初中毕业证（或同等学力证明）。咨询报名请添加叶老师微信获取最新招生政策。</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">学校住宿条件怎么样？<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">学校提供6人间标准电梯公寓（上床下桌），每间宿舍配备空调、独立卫生间、热水淋浴、洗衣机。住宿费仅800元/学期，性价比极高。</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">有哪些助学政策？学费贵不贵？<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">①国家免学费：文科类1050元/年、理科医类1350元/年（符合条件可免3年）；②国家助学金：连片特困地区学生可享2300元/年；③雨露计划：贫困户学生可享3000元/年。住宿费800元/学期，教科书费300元/学期。</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">毕业后能考大学吗？<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">可以！学校开设高考升学班，学生可通过职教高考、高职单招、对口升学等多种途径升入本科或大专院校继续深造。文化课和专业课同步教学，升学渠道畅通。</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">学校毕业生就业情况如何？<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">学校与20余家企业建立校企合作关系，入学签订就业推荐协议。毕业生可推荐到合作企业对口就业，也可自主择业。学校就业指导中心全程跟踪服务。</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">怎样预约到校参观？<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">添加叶老师微信即可预约校园参观，我们提供免费接送服务。学校地址：江西省赣州经济技术开发区湖边镇湖边大道1号。欢迎家长和学生随时到校实地考察！</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>🏫 赣州青年科技职业学校</h3>
+                <p>
+                    全日制综合性中等职业学校 · 招生代码：3636000425<br>
+                    地址：江西省赣州经济技术开发区湖边镇湖边大道1号<br>
+                    邮箱：qnkjxx@163.com
+                </p>
+                <a href="#wechat" class="footer-wechat-btn"><i class="fa-brands fa-weixin"></i> 添加微信咨询</a>
+            </div>
+            <div class="footer-links">
+                <h4>快速导航</h4>
+                <a href="#about">学校简介</a>
+                <a href="#advantages">办学优势</a>
+                <a href="#majors">热门专业</a>
+                <a href="#admissions">招生报名</a>
+                <a href="#faq">常见问题</a>
+            </div>
+            <div class="footer-links">
+                <h4>联系方式</h4>
+                <a href="#wechat"><i class="fa-brands fa-weixin"></i> 叶老师微信</a>
+                <a href="tel:13307078693"><i class="fas fa-phone"></i> 肖老师：13307078693</a>
+                <a href="tel:13330130301"><i class="fas fa-phone"></i> 邱主任：13330130301</a>
+                <a href="tel:18162182833"><i class="fas fa-phone"></i> 张老师：18162182833</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 赣州青年科技职业学校招生办公室 · 版权所有</p>
+        </div>
+    </footer>
+
+    <!-- Floating WeChat -->
+    <div class="floating-wechat" id="floatingWechat">
+        <div class="wechat-popup" id="wechatPopup">
+            <img src="qrcode.jpg" alt="叶老师微信二维码" style="width:160px;height:160px;border-radius:12px;object-fit:contain;margin:0 auto 12px;display:block;">
+            <p style="font-size:0.85rem;font-weight:600;">叶老师</p>
+            <p style="font-size:0.8rem;color:var(--text-light);">微信号：Ylc-xianyu</p>
+            <p style="font-size:0.75rem;color:var(--text-light);">扫码或长按添加好友</p>
+        </div>
+        <button class="floating-wechat-inner" id="floatingWechatBtn" aria-label="微信咨询"><i class="fa-brands fa-weixin"></i> 微信咨询</button>
+    </div>
+
+    <!-- ==================== AI 智能咨询聊天助手 ==================== -->
+    <!-- AI 智能咨询入口按钮 → 跳转独立聊天页面 -->
+    <a href="ai-chat.html" class="ai-chat-btn" id="aiChatBtn" aria-label="AI智能咨询" title="打开AI智能招生咨询助手" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><circle cx="12" cy="11" r="1.5"/><circle cx="8" cy="11" r="1.5"/><circle cx="16" cy="11" r="1.5"/></svg>
+        <span class="badge" id="aiChatBadge">AI</span>
+    </a>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        mobileToggle.addEventListener('click', () => navLinks.classList.toggle('mobile-open'));
+        navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('mobile-open')));
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 10));
+
+        const floatingWechatBtn = document.getElementById('floatingWechatBtn');
+        const wechatPopup = document.getElementById('wechatPopup');
+        let popupOpen = false;
+        floatingWechatBtn.addEventListener('click', (e) => { e.stopPropagation(); popupOpen = !popupOpen; wechatPopup.classList.toggle('show', popupOpen); });
+        document.addEventListener('click', (e) => { if (popupOpen && !e.target.closest('#floatingWechat')) { popupOpen = false; wechatPopup.classList.remove('show'); } });
+
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const faqItem = btn.parentElement;
+                const isOpen = faqItem.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
+                if (!isOpen) faqItem.classList.add('open');
+            });
+        });
+
+        const inquiryForm = document.getElementById('inquiryForm');
+        const toast = document.getElementById('toast');
+        inquiryForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(inquiryForm);
+
+            // 发送到 Formspree，您邮箱收到通知
+            try {
+                await fetch('https://formspree.io/f/xzdqdyjj', {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+            } catch (err) {
+                console.log('提交出错，但数据已尝试发送');
+            }
+
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+            inquiryForm.reset();
+            popupOpen = false;
+            wechatPopup.classList.remove('show');
+            setTimeout(() => {
+                const addWechat = confirm('✅ 报名信息已提交成功！\n\n叶老师将尽快联系您。\n为确保及时沟通，建议您现在添加叶老师微信。\n\n点击"确定"复制微信号到剪贴板');
+                if (addWechat) {
+                    navigator.clipboard.writeText('Ylc-xianyu').then(() => {
+                        alert('✅ 微信号已复制！\n请打开微信搜索添加好友。');
+                    }).catch(() => {});
+                }
+            }, 500);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } });
+        }, observerOptions);
+        document.querySelectorAll('.card, .major-card, .major-tag, .faq-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+        setTimeout(() => {
+            document.querySelectorAll('.card, .major-card, .major-tag, .faq-item').forEach(el => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+        }, 300);
+    </script>
+</body>
+</html>
